@@ -135,9 +135,9 @@ def cmd_convert(args) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     try:
-        import heat3d_update
+        from . import update
 
-        heat3d_update.startup("heat3d_ext_riot")
+        update.startup("heat3d_ext_riot")
     except Exception:  # an update check never stops a conversion
         pass
     ap = argparse.ArgumentParser(prog=PROG, description="What League of Legends and VALORANT replays carry in the open")
