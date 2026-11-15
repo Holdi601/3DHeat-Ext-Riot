@@ -1,0 +1,98 @@
+# 3DHeat Riot: what League of Legends and VALORANT replays carry in the open
+
+**What is it?** This tool reads League of Legends (`.rofl`) and VALORANT
+(`.vrf`) replays and writes out what each file carries in the open: League's
+end-of-game box score for all ten players and the replay's header; VALORANT's
+map, match id, agents and the server's timeline of kills, rounds and spikes.
+
+**Why would I use it?** To keep your matches' numbers - every player's
+kills, deaths, gold, damage and a hundred more per League game, every round
+and kill of a VALORANT game - as plain tables, for your own statistics or the
+[3DHeat](https://github.com/Holdi601/3DHeat) tools.
+
+**Example:** `heat3d-riot-replays convert EUW1-7123456789.rofl -o out` ->
+`out/EUW1-7123456789.rofl.json` (everything read) and
+`out/EUW1-7123456789.rofl.players.csv` (the box score, a row per player).
+
+**Documentation:** [holdi601.github.io/3DHeat-Ext-Riot](https://holdi601.github.io/3DHeat-Ext-Riot/),
+a page per command with step-by-step use and example output. Part of
+[3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
+
+**What it does not do:** read positions or anything else of the game itself.
+That is encrypted and obfuscated inside the replays, against cheating; getting
+through it would mean taking the game apart, which Riot's terms forbid (Terms
+of Service 3.1 and 7.1). This tool breaks no encryption and undoes no
+obfuscation: those parts are named by their place in the file and left unread.
+It is kept outside the 3DHeat tools on purpose: if it ever has to go, nothing
+else goes with it.
+
+## Install
+
+New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-Riot/before-you-start.html) first.
+
+1. Install Python 3.10 or later. Nothing else is needed.
+2. `git clone https://github.com/Holdi601/3DHeat-Ext-Riot` (or download the
+   ZIP) and open a terminal in that folder.
+3. Install the command and check where your replays are:
+
+```bash
+python -m pip install -e .        # installs the heat3d-riot-replays command
+heat3d-riot-replays list          # where both games save replays, and the ones there
+```
+
+## Commands
+
+| Command | Does | Page |
+|---|---|---|
+| `list` | where League of Legends (`Documents\League of Legends\Replays`) and VALORANT (`%LOCALAPPDATA%\VALORANT\Saved\Demos`) save replays, and the replays there | [list](https://holdi601.github.io/3DHeat-Ext-Riot/list.html) |
+| `convert [REPLAY or FOLDER ...] -o OUT` | each replay's open parts into `OUT`; without a replay, every one in both games' folders | [convert](https://holdi601.github.io/3DHeat-Ext-Riot/convert.html) |
+
+```bash
+heat3d-riot-replays convert EUW1-7123456789.rofl -o out   # one replay
+heat3d-riot-replays convert -o out                        # every replay both games saved
+```
+
+Exit status: 0 done; 1 a replay failed; 2 nothing to read - no replay found, or
+a file that is not a replay this tool understands (the message says which).
+Every option, as the program prints it: [Command reference](https://holdi601.github.io/3DHeat-Ext-Riot/cli-reference.html).
+
+## What comes out, and using it
+
+Per replay, named after the file:
+
+- `<file>.json` - everything read: for League the game length, version, game
+  id, every player's box score (`players`), the whole metadata, ROFL1's
+  payload header and chunk table; for VALORANT the info block, the map, the
+  match id, the agents and every event (kill with killer and victim as network
+  ids, round start, spike planted, defused, exploded, ultimate, side switch).
+  `sections` names every part of the file by its byte range with what was read
+  of it, the unread parts included.
+- `<file>.players.csv` (League) - the box score, a row per player, every field
+  the game totals; `<file>.events.csv` (VALORANT) - the event timeline.
+
+These have no positions, so they are tables to read, not to draw: open the CSV
+in a spreadsheet. For a League match on the map in the 3DHeat viewer, the
+3DHeat Watcher runs this tool and, with your own Riot developer key, adds the
+match's official timeline from Riot's API - every player's position once a
+minute and every kill where it happened
+([League of Legends replays in the Watcher](https://holdi601.github.io/3DHeat-Watcher/game-lol-replays.html)).
+
+## Terms
+
+League of Legends and VALORANT belong to Riot Games, who do not endorse this
+project. The tool reads replay files on your machine, only what they carry in
+the open, and talks to no server
+([Terms and licence](https://holdi601.github.io/3DHeat-Ext-Riot/terms.html)).
+
+## Tests
+
+```bash
+python -m pip install -e .[test]
+python -m pytest
+```
+
+On made-up files only: no replay is part of this repository.
+
+## Licence
+
+MIT ([`LICENSE`](LICENSE)). What it uses and consulted: [`LICENSES.md`](LICENSES.md).

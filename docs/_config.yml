@@ -1,0 +1,17 @@
+title: 3DHeat Riot
+description: What League of Legends and VALORANT replays carry in the open, for 3DHeat.
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+plugins:
+  - jekyll-remote-theme
+search_enabled: true
+heading_anchors: true
+aux_links:
+  "GitHub": "https://github.com/Holdi601/3DHeat-Ext-Riot"
+  "3DHeat": "https://holdi601.github.io/3DHeat/"
+exclude:
+  - "*.py"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

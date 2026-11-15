@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Replays and what is read from them are the user's own, never part of this repository.
+*.rofl
+*.vrf
+*.rofl.json
+*.vrf.json
+*.csv
+*.parquet
+.claude/
+*.jsonl
