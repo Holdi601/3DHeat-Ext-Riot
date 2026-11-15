@@ -81,4 +81,3 @@ read the `.json` ([Reading: convert](convert.md)).
 | Ext-Dota | the Dota 2 map as a 3D level | [3DHeat-Ext-Dota](https://github.com/Holdi601/3DHeat-Ext-Dota) | [docs](https://holdi601.github.io/3DHeat-Ext-Dota/) |
 | Ext-DotaReplay | Dota 2 replays as tables | [3DHeat-Ext-DotaReplay](https://github.com/Holdi601/3DHeat-Ext-DotaReplay) | [docs](https://holdi601.github.io/3DHeat-Ext-DotaReplay/) |
 | Ext-Riot | League of Legends and VALORANT replays: what they carry in the open | [3DHeat-Ext-Riot](https://github.com/Holdi601/3DHeat-Ext-Riot) | [docs](https://holdi601.github.io/3DHeat-Ext-Riot/) |
-| Ext-Osu | osu! replays: the cursor's path and the score | [3DHeat-Ext-Osu](https://github.com/Holdi601/3DHeat-Ext-Osu) | [docs](https://holdi601.github.io/3DHeat-Ext-Osu/) |

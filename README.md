@@ -21,9 +21,11 @@ a page per command with step-by-step use and example output. Part of
 **What it does not do:** read positions or anything else of the game itself.
 That is encrypted and obfuscated inside the replays, against cheating; getting
 through it would mean taking the game apart, which Riot's terms forbid (Terms
-of Service 3.1 and 7.1). This tool breaks no encryption and undoes no
-obfuscation: those parts are named by their place in the file and left unread.
-It is kept outside the 3DHeat tools on purpose: if it ever has to go, nothing
+of Service 3.1 and 7.1). This tool reads only the unencrypted parts of your own
+`.rofl` and `.vrf` files; it breaks no encryption and does no deobfuscation -
+those parts are named by their place in the file and left unread - and it
+ships no Riot assets: no game file, art, map, logo or data of the games. It is
+kept outside the 3DHeat tools on purpose: if it ever has to go, nothing
 else goes with it.
 
 ## Install

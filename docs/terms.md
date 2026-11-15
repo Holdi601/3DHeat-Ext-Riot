@@ -8,8 +8,9 @@ nav_order: 8
 ## Riot's games and replays
 
 League of Legends and VALORANT belong to Riot Games, who do not endorse this
-project. This tool ships nothing of either game and talks to no server: it
-reads replay files on your machine, outside the game, and changes nothing in
+project. This tool ships no Riot assets - no game file, art, model, map,
+sound, logo or data of either game - and talks to no server: it reads your
+own replay files on your machine, outside the game, and changes nothing in
 it. What it writes is yours to keep; using the tool is your decision, under
 the terms you accepted for the games.
 

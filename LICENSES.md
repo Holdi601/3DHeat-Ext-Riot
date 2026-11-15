@@ -13,14 +13,17 @@ source is what counts, not this file.
 
 ## What it reads, and what it does not
 
-League of Legends and VALORANT belong to Riot Games. This repository holds no
-replay and nothing read from one; the tool reads replay files on the user's
-own machine, and what it writes stays there.
+League of Legends and VALORANT belong to Riot Games, who do not endorse this
+project. This repository holds **no Riot assets** - no game file, art, model,
+map, sound, logo or data of the games - and no replay or anything read from
+one. The tool reads the user's own `.rofl` and `.vrf` replay files, on the
+user's own machine, and what it writes stays there.
 
-It reads **only what each file carries in the open**: a `.rofl`'s plain JSON
+It reads **only the unencrypted parts of each file**: a `.rofl`'s plain JSON
 metadata (the end-of-game box score), its header and chunk table; a `.vrf`'s
-info block, header facts and event chunks. It **breaks no encryption and
-undoes no obfuscation**: the game data inside the replays is encrypted and
+info block, header facts and event chunks. It **breaks no encryption and does
+no deobfuscation**: it contains no key, no decryption and no code taken from
+the games. The game data inside the replays is encrypted and
 obfuscated against cheating, and getting through that would mean taking the
 game client apart, which Riot's Terms of Service forbid (3.1, 7.1). Those parts
 are named by their byte range and left unread. The tool talks to no server; the
