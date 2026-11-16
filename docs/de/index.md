@@ -3,7 +3,7 @@ title: Start
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "7d4b8345cc71"
+source_hash: "616267ea2ce7"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -26,9 +26,13 @@ Runde und jeden Kill eines VALORANT-Spiels – für deine eigene Statistik oder 
 `out/EUW1-7123456789.rofl.json` und `out/EUW1-7123456789.rofl.players.csv`.
 
 **Was es nicht tut:** Positionen oder das Spiel selbst lesen. Dieser Teil eines Replays ist
-verschlüsselt und gegen Betrug verschleiert; ihn zu knacken hieße, das Spiel auseinanderzunehmen,
-was Riots Bedingungen verbieten. Dieses Werkzeug bricht keine Verschlüsselung und hebt keine
-Verschleierung auf ([Bedingungen und Lizenz](terms.md)).
+verschlüsselt; dieses Werkzeug bricht keine Verschlüsselung und hebt keine Verschleierung auf
+([Bedingungen und Lizenz](terms.md)).
+
+**Ein eigenes Projekt:** Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei,
+eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren,
+aktualisieren, pflegen – oder auf Wunsch eines Rechteinhabers zurückziehen –, ohne den Viewer oder
+die anderen Werkzeuge zu berühren.
 
 ## Schnellstart {#quick-start}
 
@@ -52,7 +56,7 @@ Tabellenkalkulation oder lies die `.json` ([Lesen: convert](convert.md)).
 | [Vor dem Start](before-you-start.md) | Python, ein Terminal, ein erster Lauf |
 | [Replays finden: list](list.md) | wo beide Spiele Replays speichern, eins speichern, was `list` ausgibt |
 | [Lesen: convert](convert.md) | was von jeder Datei gelesen wird, was herauskommt, was nicht gelesen wird |
-| [Bedingungen und Lizenz](terms.md) | Riots Bedingungen, was gelesen wird und was nie, der Riot-API-Schlüssel |
+| [Bedingungen und Lizenz](terms.md) | was gelesen wird und was nie, der Riot-API-Schlüssel, die Lizenz |
 | [Befehlsreferenz](../cli-reference.md) | jede Option und jedes Feld, aus dem Code erzeugt |
 | [Diese Dokumentation pflegen](maintaining.md) | die Checkliste für ein Release |
 

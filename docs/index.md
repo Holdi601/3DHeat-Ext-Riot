@@ -21,9 +21,13 @@ which runs this tool on every replay you save.
 `out/EUW1-7123456789.rofl.json` and `out/EUW1-7123456789.rofl.players.csv`.
 
 **What it does not do:** read positions or the game itself. That part of a
-replay is encrypted and obfuscated against cheating, and getting through it
-would mean taking the game apart, which Riot's terms forbid. This tool breaks
-no encryption and undoes no obfuscation ([Terms](terms.md)).
+replay is encrypted; this tool breaks no encryption and undoes no obfuscation
+([Terms](terms.md)).
+
+**Its own project:** Each game reader is its own small project with its own
+licence file, releases and issue tracker, so it can be installed, updated,
+maintained - or withdrawn on a rights holder's request - on its own, without
+affecting the viewer or the other tools.
 
 ## Quick start
 
@@ -47,7 +51,7 @@ read the `.json` ([Reading: convert](convert.md)).
 | [Before you start](before-you-start.md) | Python, a terminal, a first run |
 | [Finding replays: list](list.md) | where both games save replays, saving one, what `list` prints |
 | [Reading: convert](convert.md) | what is read of each file, what comes out, what is not read |
-| [Terms and licence](terms.md) | Riot's terms, what is read and what never is, the Riot API key |
+| [Terms and licence](terms.md) | what is read and what never is, the Riot API key, the licence |
 | [Command reference](cli-reference.md) | every option and field, generated from the code |
 | [Maintaining these docs](maintaining.md) | the release checklist |
 

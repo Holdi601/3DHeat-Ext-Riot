@@ -3,9 +3,8 @@ League of Legends and VALORANT replays: what of them can be read as it is.
 
 Both games save replays to the player's disk, and both protect what is inside:
 the moment-to-moment game data is obfuscated, and differently with every patch,
-to keep it from being used to cheat. Getting through that means taking the
-game's own code apart, which Riot's terms forbid (Terms of Service 3.1 and 7.1)
-- so it is not done here. What each file carries in the open is read, and
+to keep it from being used to cheat. That part is not decoded here. What
+each file carries in the open is read, and
 every part of the file is named by its byte range (`sections`), with what is
 read of it, so that a user of the result can keep every part whole (3DHeat's
 converter rule, docs/converters.md in the viewer's repository).

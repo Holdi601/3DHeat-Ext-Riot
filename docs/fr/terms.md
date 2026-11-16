@@ -3,7 +3,7 @@ title: "Conditions et licence"
 nav_order: 8
 lang: "fr"
 source: terms.md
-source_hash: "b8ab95d59a93"
+source_hash: "2427841ba70b"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,18 +11,17 @@ search_exclude: true
 
 ## Les jeux et les replays de Riot {#riots-games-and-replays}
 
-League of Legends et VALORANT appartiennent à Riot Games, qui ne soutient pas ce
-projet. Cet outil n'embarque aucun élément de Riot - aucun fichier de jeu, illustration, modèle, carte,
-son, logo ni donnée de l'un ou l'autre jeu - et ne parle à aucun serveur : il lit vos propres
-fichiers de replay sur votre machine, en dehors du jeu, et ne modifie rien dedans. Ce qu'il écrit
-vous appartient ; utiliser l'outil est votre décision, selon les conditions que vous avez acceptées pour les jeux.
+3DHeat Riot n'est ni affilié à Riot Games ni approuvé par Riot Games. League of Legends, VALORANT et
+les noms et marques associés appartiennent à leurs propriétaires. Cet outil n'embarque aucun élément
+de Riot - aucun fichier de jeu, illustration, modèle, carte, son, logo ni donnée de l'un ou l'autre
+jeu - et ne parle à aucun serveur : il lit les fichiers de replay que les jeux ont écrits sur votre
+ordinateur, en dehors du jeu, et ne modifie rien dedans. Ce qu'il écrit reste sur votre machine.
 
 ## Ce qui est lu, et ce qui ne l'est jamais {#what-is-read-and-what-never-is}
 
-Les deux jeux protègent ce qu'il y a dans leurs replays : les données de jeu, instant par instant, sont
-chiffrées et brouillées, et différemment à chaque patch, pour empêcher qu'on s'en serve pour tricher.
-Passer cette protection voudrait dire démonter le client du jeu, ce que les Conditions d'utilisation
-de Riot interdisent (sections 3.1 et 7.1). Donc cet outil :
+Les deux jeux protègent ce qu'il y a dans leurs replays : les données de jeu, instant par instant,
+sont chiffrées et brouillées, et différemment à chaque patch, pour empêcher qu'on s'en serve pour
+tricher. Cet outil :
 
 - lit **seulement ce que chaque fichier contient en clair** - les métadonnées JSON en clair d'un `.rofl`
   (le tableau de fin de partie), son en-tête et sa table des morceaux ; le bloc d'informations d'un `.vrf`,
@@ -40,10 +39,15 @@ L'outil n'a besoin ni de compte ni de clé. Les positions d'une partie de League
 l'API Match-V5 de Riot, non du fichier : le 3DHeat Watcher peut récupérer la chronologie d'un match avec
 **votre propre** clé de développeur Riot (une clé personnelle est prévue pour « showing (self) player stats »). Cette récupération est celle du Watcher ; elle est désactivée sans clé, et cet outil n'envoie rien nulle part.
 
-## Pourquoi un paquet à part {#why-a-separate-package}
+## Un projet à part {#its-own-project}
 
-Si Riot demande un jour qu'il disparaisse, il partira seul, et le visualiseur, le Watcher et
-les autres outils resteront.
+Chaque lecteur de jeu est un petit projet à part, avec son propre fichier de licence, ses propres
+versions et son propre suivi des tickets : il peut être installé, mis à jour, maintenu - ou retiré à
+la demande d'un ayant droit - seul, sans toucher au visualiseur ni aux autres outils.
+
+Ayants droit : ouvrez un ticket sur
+[3DHeat-Ext-Riot/issues](https://github.com/Holdi601/3DHeat-Ext-Riot/issues) - nous répondons vite
+et retirons tout ce qui est demandé.
 
 ## Licence et sources {#licence-and-sources}
 

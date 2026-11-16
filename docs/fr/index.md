@@ -3,7 +3,7 @@ title: "Accueil"
 nav_order: 1
 lang: "fr"
 source: index.md
-source_hash: "7d4b8345cc71"
+source_hash: "616267ea2ce7"
 nav_exclude: true
 search_exclude: true
 permalink: /fr/
@@ -25,10 +25,14 @@ manche et chaque élimination d'une partie de VALORANT - pour vos propres statis
 **Exemple :** `heat3d-riot-replays convert EUW1-7123456789.rofl -o out` ->
 `out/EUW1-7123456789.rofl.json` et `out/EUW1-7123456789.rofl.players.csv`.
 
-**Ce qu'il ne fait pas :** lire les positions ou la partie elle-même. Cette partie d'un
-replay est chiffrée et brouillée contre la triche, et la traverser voudrait dire démonter le jeu,
-ce que les conditions de Riot interdisent. Cet outil ne casse aucun chiffrement et ne défait aucun
-brouillage ([Conditions](terms.md)).
+**Ce qu'il ne fait pas :** lire les positions ou la partie elle-même. Cette partie d'un replay est
+chiffrée ; cet outil ne casse aucun chiffrement et ne défait aucun brouillage
+([Conditions](terms.md)).
+
+**Un projet à part :** Chaque lecteur de jeu est un petit projet à part, avec son propre fichier de
+licence, ses propres versions et son propre suivi des tickets : il peut être installé, mis à jour,
+maintenu - ou retiré à la demande d'un ayant droit - seul, sans toucher au visualiseur ni aux autres
+outils.
 
 ## Démarrage rapide {#quick-start}
 
@@ -52,7 +56,7 @@ heat3d-riot-replays convert -o out          # every replay there, read
 | [Avant de commencer](before-you-start.md) | Python, un terminal, un premier lancement |
 | [Trouver les replays : list](list.md) | où les deux jeux sauvegardent les replays, sauvegarder un replay, ce qu'affiche `list` |
 | [Lecture : convert](convert.md) | ce qui est lu de chaque fichier, ce qui en sort, ce qui n'est pas lu |
-| [Conditions et licence](terms.md) | les conditions de Riot, ce qui est lu et ce qui ne l'est jamais, la clé d'API Riot |
+| [Conditions et licence](terms.md) | ce qui est lu et ce qui ne l'est jamais, la clé d'API Riot, la licence |
 | [Référence des commandes](../cli-reference.md) | chaque option et chaque champ, générés à partir du code |
 | [Entretien de ces documents](maintaining.md) | la liste de contrôle de publication |
 

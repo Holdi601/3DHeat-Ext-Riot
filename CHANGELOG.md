@@ -21,6 +21,6 @@ Where each feature is documented
 | Installing, a first run | [Before you start](docs/before-you-start.md) |
 | Where replays are, saving one (`list`) | [Finding replays: list](docs/list.md) |
 | Reading (`convert`), what comes out, what is not read | [Reading: convert](docs/convert.md) |
-| Riot's terms, what is read and what is not, the Riot API key | [Terms and licence](docs/terms.md) |
+| What is read and what is not, the Riot API key, the licence | [Terms and licence](docs/terms.md) |
 | Every option and field, generated | [Command reference](docs/cli-reference.md) |
 | Release checklist for the docs | [Maintaining these docs](docs/maintaining.md) |

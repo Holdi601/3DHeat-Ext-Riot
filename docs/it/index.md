@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 lang: "it"
 source: index.md
-source_hash: "7d4b8345cc71"
+source_hash: "616267ea2ce7"
 nav_exclude: true
 search_exclude: true
 permalink: /it/
@@ -23,9 +23,12 @@ le tue statistiche, oppure per il 3DHeat Watcher, che lancia questo strumento su
 **Esempio:** `heat3d-riot-replays convert EUW1-7123456789.rofl -o out` ->
 `out/EUW1-7123456789.rofl.json` e `out/EUW1-7123456789.rofl.players.csv`.
 
-**Cosa non fa:** leggere le posizioni o la partita stessa. Quella parte di un replay è cifrata e offuscata contro
-i bari, e arrivarci significherebbe smontare il gioco, cosa che i termini di Riot vietano. Questo strumento non
-rompe alcuna cifratura e non annulla alcun offuscamento ([Termini](terms.md)).
+**Cosa non fa:** leggere le posizioni o la partita stessa. Quella parte di un replay è cifrata; questo strumento
+non rompe alcuna cifratura e non annulla alcun offuscamento ([Termini](terms.md)).
+
+**Un progetto a sé:** Ogni lettore di un gioco è un piccolo progetto a sé, con il proprio file di licenza, i propri
+rilasci e il proprio tracker delle issue, così può essere installato, aggiornato, mantenuto - o ritirato su
+richiesta di un titolare dei diritti - da solo, senza toccare il visualizzatore o gli altri strumenti.
 
 ## Avvio rapido {#quick-start}
 
@@ -49,7 +52,7 @@ heat3d-riot-replays convert -o out          # tutti i replay presenti, letti
 | [Prima di iniziare](before-you-start.md) | Python, un terminale, una prima esecuzione |
 | [Trovare i replay: list](list.md) | dove entrambi i giochi salvano i replay, come salvarne uno, cosa stampa `list` |
 | [Lettura: convert](convert.md) | cosa viene letto di ogni file, cosa esce, cosa non viene letto |
-| [Termini e licenza](terms.md) | i termini di Riot, cosa viene letto e cosa non lo sarà mai, la chiave API di Riot |
+| [Termini e licenza](terms.md) | cosa viene letto e cosa non lo sarà mai, la chiave API di Riot, la licenza |
 | [Riferimento dei comandi](../cli-reference.md) | ogni opzione e campo, generati dal codice |
 | [Manutenzione di questa documentazione](maintaining.md) | la lista di controllo per ogni rilascio |
 

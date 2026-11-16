@@ -3,7 +3,7 @@ title: Inicio
 nav_order: 1
 lang: "es"
 source: index.md
-source_hash: "7d4b8345cc71"
+source_hash: "616267ea2ce7"
 nav_exclude: true
 search_exclude: true
 permalink: /es/
@@ -19,7 +19,9 @@ permalink: /es/
 **Ejemplo:** `heat3d-riot-replays convert EUW1-7123456789.rofl -o out` ->
 `out/EUW1-7123456789.rofl.json` y `out/EUW1-7123456789.rofl.players.csv`.
 
-**Lo que no hace:** leer posiciones ni el juego en sí. Esa parte de una repetición está cifrada y ofuscada contra las trampas, y atravesarla supondría desmontar el juego, lo que prohíben las condiciones de Riot. Esta herramienta no rompe ningún cifrado ni deshace ninguna ofuscación ([Términos](terms.md)).
+**Lo que no hace:** leer posiciones ni el juego en sí. Esa parte de una repetición está cifrada; esta herramienta no rompe ningún cifrado ni deshace ninguna ofuscación ([Términos](terms.md)).
+
+**Un proyecto propio:** Cada lector de un juego es un pequeño proyecto propio, con su propio archivo de licencia, sus versiones y su gestor de incidencias, así que puede instalarse, actualizarse, mantenerse (o retirarse a petición de un titular de derechos) por sí solo, sin afectar al visor ni a las demás herramientas.
 
 ## Inicio rápido {#quick-start}
 
@@ -43,7 +45,7 @@ lee el `.json` ([Lectura: convert](convert.md)).
 | [Antes de empezar](before-you-start.md) | Python, una terminal, una primera ejecución |
 | [Encontrar repeticiones: list](list.md) | dónde guardan repeticiones ambos juegos, cómo guardar una, qué imprime `list` |
 | [Lectura: convert](convert.md) | qué se lee de cada archivo, qué sale, qué no se lee |
-| [Términos y licencia](terms.md) | las condiciones de Riot, qué se lee y qué nunca, la clave de API de Riot |
+| [Términos y licencia](terms.md) | qué se lee y qué nunca, la clave de API de Riot, la licencia |
 | [Referencia de comandos](../cli-reference.md) | cada opción y campo, generados desde el código |
 | [Mantener estas páginas](maintaining.md) | la lista de comprobación de cada versión |
 

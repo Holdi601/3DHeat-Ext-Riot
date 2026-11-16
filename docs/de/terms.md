@@ -3,7 +3,7 @@ title: Bedingungen und Lizenz
 nav_order: 8
 lang: "de"
 source: terms.md
-source_hash: "b8ab95d59a93"
+source_hash: "2427841ba70b"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,19 +11,18 @@ search_exclude: true
 
 ## Riots Spiele und Replays {#riots-games-and-replays}
 
-League of Legends und VALORANT gehören Riot Games, das dieses Projekt nicht unterstützt.
-Dieses Werkzeug liefert kein Riot-Asset mit – keine Spieldatei, keine Grafik, kein Modell,
-keine Karte, kein Sound, kein Logo und keine Daten eines der beiden Spiele – und spricht mit
-keinem Server. Es liest deine eigenen Replay-Dateien auf deinem Rechner, außerhalb des Spiels,
-und ändert darin nichts. Was es schreibt, gehört dir zum Behalten; das Werkzeug zu benutzen ist
-deine Entscheidung, unter den Bedingungen, die du für die Spiele akzeptiert hast.
+3DHeat Riot ist weder mit Riot Games verbunden noch von Riot Games unterstützt. League of Legends,
+VALORANT und zugehörige Namen und Marken gehören ihren Inhabern. Dieses Werkzeug liefert kein
+Riot-Asset mit – keine Spieldatei, keine Grafik, kein Modell, keine Karte, kein Sound, kein Logo und
+keine Daten eines der beiden Spiele – und spricht mit keinem Server. Es liest die Replay-Dateien,
+die die Spiele auf deinem Rechner geschrieben haben, außerhalb des Spiels, und ändert darin nichts.
+Was es schreibt, bleibt auf deinem Rechner.
 
 ## Was gelesen wird und was nie {#what-is-read-and-what-never-is}
 
-Beide Spiele schützen, was in ihren Replays steckt: Die Spieldaten im Moment-zu-Moment-Ablauf
-sind verschlüsselt und verschleiert, und zwar bei jedem Patch anders, damit man sie nicht zum
-Betrügen nutzen kann. Sie zu knacken hieße, den Spiel-Client auseinanderzunehmen, was Riots
-Nutzungsbedingungen verbieten (Abschnitte 3.1 und 7.1). Deshalb tut dieses Werkzeug Folgendes:
+Beide Spiele schützen, was in ihren Replays steckt: Die Spieldaten im Moment-zu-Moment-Ablauf sind
+verschlüsselt und verschleiert, und zwar bei jedem Patch anders, damit man sie nicht zum Betrügen
+nutzen kann. Dieses Werkzeug:
 
 - liest **nur, was jede Datei offen enthält** – die einfachen JSON-Metadaten einer `.rofl`
   (die Endstatistik), ihren Header und ihre Chunk-Tabelle; bei einer `.vrf` den Info-Block, die
@@ -44,10 +43,16 @@ Matches mit **deinem eigenen** Riot-Developer-Schlüssel abrufen (ein persönlic
 für „showing (self) player stats“ gedacht). Dieser Abruf gehört dem Watcher, er ist ohne Schlüssel
 ausgeschaltet, und dieses Werkzeug sendet nichts irgendwohin.
 
-## Warum ein eigenes Paket {#why-a-separate-package}
+## Ein eigenes Projekt {#its-own-project}
 
-Wenn Riot jemals verlangt, dass es verschwindet, geht es allein, und der Viewer, der Watcher und
-die anderen Werkzeuge bleiben.
+Jeder Spiel-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und
+eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren, pflegen – oder
+auf Wunsch eines Rechteinhabers zurückziehen –, ohne den Viewer oder die anderen Werkzeuge zu
+berühren.
+
+Rechteinhaber: Eröffnet ein Issue unter
+[3DHeat-Ext-Riot/issues](https://github.com/Holdi601/3DHeat-Ext-Riot/issues) – wir antworten schnell
+und entfernen auf Wunsch alles.
 
 ## Lizenz und Quellen {#licence-and-sources}
 

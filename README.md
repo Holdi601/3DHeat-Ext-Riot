@@ -19,14 +19,11 @@ a page per command with step-by-step use and example output. Part of
 [3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
 
 **What it does not do:** read positions or anything else of the game itself.
-That is encrypted and obfuscated inside the replays, against cheating; getting
-through it would mean taking the game apart, which Riot's terms forbid (Terms
-of Service 3.1 and 7.1). This tool reads only the unencrypted parts of your own
-`.rofl` and `.vrf` files; it breaks no encryption and does no deobfuscation -
-those parts are named by their place in the file and left unread - and it
-ships no Riot assets: no game file, art, map, logo or data of the games. It is
-kept outside the 3DHeat tools on purpose: if it ever has to go, nothing
-else goes with it.
+That part of a replay is encrypted. This tool reads only the unencrypted parts
+of your own `.rofl` and `.vrf` files; it breaks no encryption and does no
+deobfuscation - those parts are named by their place in the file and left unread -
+and it ships no Riot assets: no game file, art, map, logo or data of the
+games.
 
 ## Install
 
@@ -81,10 +78,21 @@ minute and every kill where it happened
 
 ## Terms
 
-League of Legends and VALORANT belong to Riot Games, who do not endorse this
-project. The tool reads replay files on your machine, only what they carry in
-the open, and talks to no server
-([Terms and licence](https://holdi601.github.io/3DHeat-Ext-Riot/terms.html)).
+3DHeat Riot is not affiliated with or endorsed by Riot Games. League of Legends,
+VALORANT and related names and trademarks belong to their owners. The tool reads
+the replay files the games wrote on your computer, only what they carry in the
+open, and talks to no server; nothing of the games is shipped or redistributed,
+and what it writes stays on your machine ([Terms and
+licence](https://holdi601.github.io/3DHeat-Ext-Riot/terms.html)).
+
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn on
+a rights holder's request - on its own, without affecting the viewer or the
+other tools.
+
+Rights holders: open an issue at
+[3DHeat-Ext-Riot/issues](https://github.com/Holdi601/3DHeat-Ext-Riot/issues) -
+we respond quickly and remove anything on request.
 
 ## Tests
 

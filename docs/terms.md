@@ -7,20 +7,18 @@ nav_order: 8
 
 ## Riot's games and replays
 
-League of Legends and VALORANT belong to Riot Games, who do not endorse this
-project. This tool ships no Riot assets - no game file, art, model, map,
-sound, logo or data of either game - and talks to no server: it reads your
-own replay files on your machine, outside the game, and changes nothing in
-it. What it writes is yours to keep; using the tool is your decision, under
-the terms you accepted for the games.
+3DHeat Riot is not affiliated with or endorsed by Riot Games. League of Legends,
+VALORANT and related names and trademarks belong to their owners. This tool
+ships no Riot assets - no game file, art, model, map, sound, logo or data of
+either game - and talks to no server: it reads the replay files the games wrote
+on your computer, outside the game, and changes nothing in it. What it writes
+stays on your machine.
 
 ## What is read, and what never is
 
-Both games protect what is inside their replays: the moment-to-moment game
-data is encrypted and obfuscated, and differently with every patch, to keep it
-from being used to cheat. Getting through that means taking the game client
-apart, which Riot's Terms of Service forbid (sections 3.1 and 7.1). So this
-tool:
+Both games protect what is inside their replays: the moment-to-moment game data
+is encrypted and obfuscated, and differently with every patch, to keep it from
+being used to cheat. This tool:
 
 - reads **only what each file carries in the open** - a `.rofl`'s plain JSON
   metadata (the end-of-game box score), its header and chunk table; a `.vrf`'s
@@ -42,10 +40,16 @@ timeline with **your own** Riot developer key (a personal key is meant for
 "showing (self) player stats"). That fetch is the Watcher's, it is off without
 a key, and nothing is sent anywhere by this tool.
 
-## Why a separate package
+## Its own project
 
-If Riot ever asks for it to go, it goes alone, and the viewer, the Watcher and
-the other tools stay.
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn on
+a rights holder's request - on its own, without affecting the viewer or the
+other tools.
+
+Rights holders: open an issue at
+[3DHeat-Ext-Riot/issues](https://github.com/Holdi601/3DHeat-Ext-Riot/issues) -
+we respond quickly and remove anything on request.
 
 ## Licence and sources
 
