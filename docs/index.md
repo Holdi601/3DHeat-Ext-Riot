@@ -31,18 +31,38 @@ affecting the viewer or the other tools.
 
 ## Quick start
 
-New to the command line? Read [Before you start](before-you-start.md) first.
-You need Python 3.10 or later, nothing else. Run these in the folder you cloned
-or unzipped:
+You need Windows, Python 3.10 or later ("Add python.exe to PATH" ticked in its
+installer) and replays the games saved: League of Legends' match history (pick
+a match, click its download button) saves to
+`Documents\League of Legends\Replays`, VALORANT's Career (pick a match,
+download its replay) to `%LOCALAPPDATA%\VALORANT\Saved\Demos`. The tool finds
+both by itself ([Finding replays: list](list.md)). Nothing else, no Git. New to
+the command line? Read [Before you start](before-you-start.md) first.
 
 ```bash
-python -m pip install -e .                  # installs the heat3d-riot-replays command
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-Riot/archive/refs/tags/v0.1.0.zip
 heat3d-riot-replays list                    # where both games save replays, the ones there
 heat3d-riot-replays convert -o out          # every replay there, read
+heat3d-riot-replays convert EUW1-7123456789.rofl -o out   # or one replay
 ```
 
-`convert` prints each file it wrote. Open the `.csv` in a spreadsheet, or
-read the `.json` ([Reading: convert](convert.md)).
+`convert` writes, per replay named after the file, `out\<file>.json`
+(everything read) and a table: `out\<file>.players.csv` for League (the box
+score, a row per player), `out\<file>.events.csv` for VALORANT (the event
+timeline); it prints each file it wrote ([Reading: convert](convert.md)).
+
+These have no positions, so they are tables to read, not to draw: open the
+`.csv` in a spreadsheet. For a League match on the map in the
+[3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start), the
+[3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/game-lol-replays.html)
+runs this tool and adds the match's positions from Riot's API (with your own
+Riot developer key); open what it writes with **Source -> Files...** and
+**Load file** in the viewer (download it with **Code -> Download ZIP**, unpack, double-click
+`start.bat`, which offers to install Node.js when it is missing and opens
+`http://127.0.0.1:5273`).
+
+When a new release is out, the tool says so when it starts and offers to
+update itself (`python -m heat3d_ext_riot.update` does the same).
 
 ## Pages
 

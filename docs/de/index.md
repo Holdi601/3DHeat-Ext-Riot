@@ -3,7 +3,7 @@ title: Start
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "616267ea2ce7"
+source_hash: "54b97b5bbcb6"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -36,18 +36,37 @@ die anderen Werkzeuge zu berühren.
 
 ## Schnellstart {#quick-start}
 
-Neu in der Kommandozeile? Lies zuerst [Vor dem Start](before-you-start.md). Du brauchst
-nur Python 3.10 oder neuer, sonst nichts. Führe diese Befehle in dem Ordner aus, in den du
-das Werkzeug geklont oder entpackt hast:
+Du brauchst Windows, Python 3.10 oder neuer (im Installer "Add python.exe to PATH"
+ankreuzen) und Replays, die die Spiele gespeichert haben: Der Match-Verlauf von League
+of Legends (ein Match wählen, auf seinen Download-Button klicken) speichert nach
+`Documents\League of Legends\Replays`, die Karriere von VALORANT (ein Match wählen, sein
+Replay herunterladen) nach `%LOCALAPPDATA%\VALORANT\Saved\Demos`. Das Werkzeug findet
+beide von selbst ([Replays finden: list](list.md)). Sonst nichts, auch kein Git. Neu in
+der Kommandozeile? Lies zuerst [Vor dem Start](before-you-start.md).
 
 ```bash
-python -m pip install -e .                  # installs the heat3d-riot-replays command
-heat3d-riot-replays list                    # where both games save replays, the ones there
-heat3d-riot-replays convert -o out          # every replay there, read
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-Riot/archive/refs/tags/v0.1.0.zip
+heat3d-riot-replays list                    # wo beide Spiele Replays speichern, die Replays dort
+heat3d-riot-replays convert -o out          # jedes Replay dort, gelesen
+heat3d-riot-replays convert EUW1-7123456789.rofl -o out   # oder ein Replay
 ```
 
-`convert` gibt jede Datei aus, die es schreibt. Öffne die `.csv` in einer
-Tabellenkalkulation oder lies die `.json` ([Lesen: convert](convert.md)).
+`convert` schreibt je Replay, nach der Datei benannt, `out\<file>.json` (alles Gelesene)
+und eine Tabelle: `out\<file>.players.csv` für League (die Spielstatistik, eine Zeile pro
+Spieler), `out\<file>.events.csv` für VALORANT (die Ereignis-Zeitleiste); es gibt jede
+Datei aus, die es schreibt ([Lesen: convert](convert.md)).
+
+Diese Dateien haben keine Positionen, sie sind also Tabellen zum Lesen, nicht zum Zeichnen:
+Öffne die `.csv` in einer Tabellenkalkulation. Für ein League-Match auf der Karte im
+[3DHeat-Viewer](https://github.com/Holdi601/3DHeat#quick-start) führt der
+[3DHeat Watcher](https://holdi601.github.io/3DHeat-Watcher/game-lol-replays.html) dieses
+Werkzeug aus und fügt die Positionen des Matches aus Riots API hinzu (mit deinem eigenen
+Riot-Entwicklerschlüssel); öffne, was er schreibt, im Viewer mit **Quelle -> Dateien...** und
+**Datei laden** (herunterladen mit **Code -> Download ZIP**, entpacken, `start.bat` doppelklicken; es
+bietet an, Node.js zu installieren, wenn es fehlt, und öffnet `http://127.0.0.1:5273`).
+
+Wenn ein neues Release erscheint, sagt das Werkzeug es beim Start und bietet an, sich
+selbst zu aktualisieren (`python -m heat3d_ext_riot.update` macht dasselbe).
 
 ## Seiten {#pages}
 

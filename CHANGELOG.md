@@ -10,6 +10,8 @@
   with every part of the file named by its byte range. Nothing encrypted or
   obfuscated is read. `list` says where both games save replays; `convert`
   writes `<file>.json` and a table (`.players.csv`, `.events.csv`).
+- Installs with one pip line from the release zip, no Git needed; a pip install knows its version and updates itself with pip when a newer release is out.
+- README: a quick start for new users.
 
 ## Docs
 
