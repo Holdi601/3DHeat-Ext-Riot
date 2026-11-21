@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0
+
+- A standalone program for Windows, Linux and macOS (no Python needed), built by CI with a `SHA256SUMS` file.
+  Without arguments it opens a window: what is found and what is missing, and the conversions as buttons.
+- `status --json` and `--check --json` for the 3DHeat app's Extractors panel; a replay reader has no maps, so
+  `extract` has nothing to do.
+- Updates ask first (update now / later / skip this version) unless automatic updates were chosen
+  (`--auto-update`, the window's checkbox, or `HEAT3D_AUTO_UPDATE=1`).
+
 ## 0.1.0
 
 - First version, moved out of the 3DHeat Watcher (its `lol-replays` and

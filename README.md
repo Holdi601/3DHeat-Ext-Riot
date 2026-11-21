@@ -25,7 +25,16 @@ deobfuscation - those parts are named by their place in the file and left unread
 and it ships no Riot assets: no game file, art, map, logo or data of the
 games.
 
-## Quick start for new users
+## The standalone program
+
+No Python needed: download the file for your system (Windows, Linux and macOS) from the
+[latest release](https://github.com/Holdi601/3DHeat-Ext-Riot/releases/latest), check it against `SHA256SUMS`, unpack it and start `heat3d-riot`. Its window
+finds the replay folders, converts the replays there (or in any folder you pick),
+and asks before it updates itself. `heat3d-riot --help` lists its commands (`heat3d-riot heat3d-riot-replays ...` runs every command below).
+The 3DHeat app's Extractors panel can install and update it for you. See
+[the install page](https://holdi601.github.io/3DHeat-Ext-Riot/before-you-start.html).
+
+## Quick start for new users (Python)
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
 ("Add python.exe to PATH" ticked in its installer), and replays saved by the

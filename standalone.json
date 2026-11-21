@@ -1,0 +1,9 @@
+{
+  "spec": "heat3d_ext_riot.standalone_spec",
+  "collect_submodules": [],
+  "platforms": {
+    "windows-x64": {"build": true, "tested": false, "note": "CI builds, tests and smoke-runs; League of Legends and VALORANT replay folders are found where the games put them"},
+    "linux-x64": {"build": true, "tested": false, "note": "CI builds and smoke-runs; League replays in Wine/Lutris prefixes under ~/Games are found, or choose the folder"},
+    "macos-arm64": {"build": true, "tested": false, "note": "CI builds and smoke-runs; League's ~/Documents replay folder is found, or choose the folder"}
+  }
+}

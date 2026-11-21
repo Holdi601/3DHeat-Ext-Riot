@@ -8,6 +8,27 @@ nav_order: 1.5
 New to the command line? This page takes you from nothing to a first run.
 It takes about ten minutes, once.
 
+## The standalone program (no Python needed)
+
+Each [release](https://github.com/Holdi601/3DHeat-Ext-Riot/releases/latest) has a ready-to-run program for Windows, Linux and macOS
+(`heat3d-riot-<version>-windows-x64.zip`, `...-linux-x64.tar.gz`, `...-macos-arm64.tar.gz`), with a
+`SHA256SUMS` file to check the download. Unpack it anywhere and start `heat3d-riot` (on macOS the
+first start may need *Open* from the right-click menu, as the program is not notarised).
+
+Started without arguments it opens a window that:
+
+- finds the folders the games keep replays in (League of Legends on Windows and macOS,
+  VALORANT on Windows), or lets you choose one;
+- says what is missing (the game, free disk space);
+- lists what the replays there carry and converts them, as the commands below do (by default
+  into the 3DHeat data folder's `matches/riot`);
+- checks for updates and asks before installing one, unless you tick *Update automatically*.
+
+The same program runs every command below: `heat3d-riot heat3d-riot-replays --help`. For scripts:
+`heat3d-riot --check --json` says what is found and missing, and `heat3d-riot status --json` what is found
+(a replay reader has no maps; `extract` has nothing to do). The 3DHeat app's Extractors panel installs,
+updates and starts it for you.
+
 ## 1. Install Python
 
 This tool needs **Python 3.10 or later**.

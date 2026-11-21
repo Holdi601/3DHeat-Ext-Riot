@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "heat3d-ext-riot"
-version = "0.1.0"
+version = "0.2.0"
 description = "What League of Legends (.rofl) and VALORANT (.vrf) replays carry in the open, for 3DHeat: box scores, header facts, event timelines; nothing encrypted or obfuscated is read"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -18,4 +18,4 @@ test = ["pytest>=8.0"]
 heat3d-riot-replays = "heat3d_ext_riot.cli:main"
 
 [tool.setuptools]
-packages = ["heat3d_ext_riot"]
+packages = ["heat3d_ext_riot", "heat3d_ext_riot.app"]
