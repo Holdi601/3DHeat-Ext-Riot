@@ -34,6 +34,10 @@ and asks before it updates itself. `heat3d-riot --help` lists its commands (`hea
 The 3DHeat app's Extractors panel can install and update it for you. See
 [the install page](https://holdi601.github.io/3DHeat-Ext-Riot/before-you-start.html).
 
+The window walks through four steps (find the game, choose, work, done) in the 3DHeat look, dark or light. On Windows the program opens only its window, with no console window; in a terminal it prints as usual, and `heat3d-riot-cli.cmd` in the same folder makes the terminal wait for it and pass on its exit code.
+
+Replays from the command line: `heat3d-riot convert <replay>... -o <folder> [--progress-json]` converts them (one JSON line per replay with `--progress-json`), and `heat3d-riot info <replay> --json` prints what a replay says about its match (map, mode, date, length, players, teams, result, game version), read from its header without converting it. The 3DHeat Library uses both.
+
 ## Quick start for new users (Python)
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later

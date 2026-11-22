@@ -13,7 +13,7 @@ from pathlib import Path
 
 from . import __version__
 from .app import paths
-from .app.spec import GameSpec, Input, Spec, Task, game_folders
+from .app.spec import GameSpec, Input, Replays, Spec, Task, game_folders
 
 
 def _usual(game: str) -> list[Path]:
@@ -50,6 +50,12 @@ def _src(levels: Path) -> str:
     p = found.get("lol") or found.get("valorant")
     return str(p) if p else ""
 
+def _replay_info(path: Path) -> dict:
+    """`info <replay> --json`: the header only (replay_info.py)."""
+    from .replay_info import info
+
+    return info(path)
+
 
 SPEC = Spec(
     id="heat3d-riot",
@@ -77,6 +83,7 @@ SPEC = Spec(
              help="each replay's open parts: <replay>.json and a table (.csv)"),
     ],
     min_free_gb=0.5,
+    replays=Replays("riot", (".rofl", ".vrf"), lambda r, out: ["heat3d-riot-replays", "convert", str(r), "-o", str(out)], info=_replay_info),
     notice="Not affiliated with or endorsed by Riot Games.",
 )
 
