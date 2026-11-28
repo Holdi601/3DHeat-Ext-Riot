@@ -25,6 +25,12 @@ deobfuscation - those parts are named by their place in the file and left unread
 and it ships no Riot assets: no game file, art, map, logo or data of the
 games.
 
+## In 3DHeat
+
+Install it from the Games page of 3DHeat: 3DHeat installs it and runs it for you. The manifest
+[`plugin.json`](plugin.json) in this repository, also beside the program in every release, tells 3DHeat
+what the tool does, which games it is for and how to call it.
+
 ## The standalone program
 
 No Python needed: download the file for your system (Windows, Linux and macOS) from the

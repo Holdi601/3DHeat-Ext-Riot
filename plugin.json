@@ -1,0 +1,121 @@
+{
+  "format": "3dheat-plugin",
+  "version": 1,
+  "id": "riot",
+  "name": "League of Legends and VALORANT",
+  "kind": "game",
+  "what": "Your replays as box scores, match facts and events",
+  "games": [
+    {
+      "id": "lol",
+      "name": "League of Legends"
+    },
+    {
+      "id": "valorant",
+      "name": "VALORANT"
+    }
+  ],
+  "platforms": [
+    "windows-x64",
+    "linux-x64",
+    "macos-arm64"
+  ],
+  "icon": "icon-64.png",
+  "programs": [
+    {
+      "id": "heat3d-riot",
+      "repo": "Holdi601/3DHeat-Ext-Riot",
+      "verbs": {
+        "check": [
+          "--check",
+          "--json"
+        ],
+        "convert": [
+          "convert",
+          "{input}",
+          "-o",
+          "{out}"
+        ],
+        "info": [
+          "info",
+          "--json",
+          "{input}"
+        ],
+        "catalog": [
+          "heat3d-riot-replays",
+          "catalog"
+        ]
+      }
+    }
+  ],
+  "capabilities": {
+    "replays": {
+      "program": "heat3d-riot"
+    },
+    "catalogue": {
+      "program": "heat3d-riot",
+      "verb": "catalog"
+    }
+  },
+  "replays": [
+    {
+      "game": "lol",
+      "format": "rofl",
+      "patterns": [
+        "*.rofl"
+      ],
+      "folders": [
+        "{documents}/League of Legends/Replays",
+        {
+          "path": "{home}/Games/*/drive_c/users/*/Documents/League of Legends/Replays",
+          "os": [
+            "linux"
+          ]
+        }
+      ],
+      "converter": {
+        "names": [
+          "heat3d-riot",
+          "heat3d-riot-replays"
+        ],
+        "output": "parquet"
+      }
+    },
+    {
+      "game": "valorant",
+      "format": "vrf",
+      "patterns": [
+        "*.vrf"
+      ],
+      "folders": [
+        "{localappdata}/VALORANT/Saved/Demos"
+      ],
+      "converter": {
+        "names": [
+          "heat3d-riot",
+          "heat3d-riot-replays"
+        ],
+        "output": "parquet"
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "id": "game",
+      "label": "The game installed on this computer",
+      "auto": false
+    }
+  ],
+  "detect": {
+    "paths": [
+      "{systemdrive}/Riot Games/League of Legends",
+      "{systemdrive}/Riot Games/VALORANT",
+      "{documents}/League of Legends",
+      "/Applications/League of Legends.app"
+    ],
+    "processes": [
+      "League of Legends.exe",
+      "VALORANT-Win64-Shipping.exe"
+    ]
+  }
+}
