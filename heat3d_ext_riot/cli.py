@@ -1,6 +1,8 @@
 """
 heat3d-riot-replays list                               where League of Legends and VALORANT save replays, and the replays there
 heat3d-riot-replays convert [REPLAY|FOLDER ...] -o OUT what each .rofl and .vrf carries in the open, into OUT
+heat3d-riot-replays catalog [--game lol|valorant] [-o LEVELS] [--oodle DLL]
+                                                       the installed games' agents, abilities and champions
 
 Exit status: 0 done, 1 a replay failed, 2 nothing to read (no replay found, not a
 League of Legends or VALORANT replay).
@@ -140,6 +142,11 @@ def main(argv: list[str] | None = None) -> int:
         update.startup("heat3d_ext_riot")
     except Exception:  # an update check never stops a conversion
         pass
+    argv = sys.argv[1:] if argv is None else argv
+    if argv[:1] == ["catalog"]:
+        from . import gamedata
+
+        return gamedata.main(argv[1:])
     ap = argparse.ArgumentParser(prog=PROG, description="What League of Legends and VALORANT replays carry in the open")
     ap.add_argument("--version", action="version", version=__version__)
     sub = ap.add_subparsers(dest="command", required=True)
@@ -152,6 +159,8 @@ def main(argv: list[str] | None = None) -> int:
                    "replay folders)")
     p.add_argument("-o", "--out", required=True, help="the folder to write to")
     p.set_defaults(run=cmd_convert)
+
+    sub.add_parser("catalog", help="the installed games' agents, abilities and champions (catalog --help)")
 
     args = ap.parse_args(argv)
     return args.run(args)

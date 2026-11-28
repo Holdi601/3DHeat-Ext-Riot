@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0
+
+- `catalog`: the installed games' catalogues from their files on disk, as `<levels>/<game>/catalog.json`
+  (`3dheat-catalog`): VALORANT's agents (with their working names) and every ability, from the English
+  text archive (its encrypted file index is not read; the entries are walked from the start, Oodle from
+  software you have installed via `--oodle` / `HEAT3D_OODLE`), and League's champions (the names of
+  their archives). The installs are found through Riot's install records.
+- New-content hooks for the extractor kit: each game's catalogue as content (`contents`,
+  `extract_content`) and the install's ids by kind (`catalog_items`: agent, ability, champion), so new
+  agents, abilities and champions after a patch are listed.
+
 ## 0.3.0
 
 - Its own icon: the 3DHeat cube with a text badge for its game (letters in 3DHeat's colours), as the

@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "cli-reference.md"
 COMMAND = "heat3d-riot-replays"
-VERBS = ["list", "convert"]
+VERBS = ["list", "convert", "catalog"]
 
 
 def run(args):

@@ -99,6 +99,7 @@ heat3d-riot-replays list          # where both games save replays, and the ones 
 |---|---|---|
 | `list` | where League of Legends (`Documents\League of Legends\Replays`) and VALORANT (`%LOCALAPPDATA%\VALORANT\Saved\Demos`) save replays, and the replays there | [list](https://holdi601.github.io/3DHeat-Ext-Riot/list.html) |
 | `convert [REPLAY or FOLDER ...] -o OUT` | each replay's open parts into `OUT`; without a replay, every one in both games' folders | [convert](https://holdi601.github.io/3DHeat-Ext-Riot/convert.html) |
+| `catalog [--game lol\|valorant] [-o LEVELS] [--oodle DLL]` | the installed games' catalogues, read from their files on disk (never while a game runs): VALORANT's agents and abilities (from its English text archive; Oodle from software you have installed, `HEAT3D_OODLE`), League's champions (their archives' names); `LEVELS/<game>/catalog.json` | [Command reference](https://holdi601.github.io/3DHeat-Ext-Riot/cli-reference.html) |
 
 ```bash
 heat3d-riot-replays convert EUW1-7123456789.rofl -o out   # one replay
